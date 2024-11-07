@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="_image/YourLogo.png" alt="Logo" width="100" height="100">
+        </div>
+
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="About.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ContactUs.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ProductServices.html">Product and Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">News</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h1 id="ContactUs">Get in Touch</h1>
+            <p>We are here to help. Please fill out the form below:</p>
+
+            <div class="contact-wrapper">
+                <form action="mailto:info@hopeforrefugees.org" method="post" onsubmit="return validateForm()">
+                    <fieldset>
+                        <legend>Contact Us</legend>
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone"
+                                placeholder="Enter your phone number" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="reason" class="form-label">Reason for Contact</label>
+                            <select class="form-select" id="reason" name="reason" required>
+                                <option value="">Select a reason</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Support</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="3"
+                                placeholder="Your message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+
+
+
+<div class="map-container" >
+
+    <h3>Select Location:</h3>
+  
+    <select id="locationDropdown">
+  
+      <option value="0">Select a location</option>
+  
+      <option value="braamfontein">148 Ameshoff St, Braamfontein, Johannesburg</option>
+  
+      <option value="riverlea">Colorado Dr, Riverlea, Johannesburg</option>
+  
+      <option value="glenhazel">4 Long Ave, Glenhazel, Johannesburg, Gauteng</option>
+  
+    </select>
+  
+     
+  
+    <div id="map-braamfontein" class="map" style="display: block;">
+  
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2834.2987111030757!2d28.032189174307643!3d-26.19125197708455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1a3c9bd29f%3A0x7ae4f64a637b6974!2sAmeshoff%20St%2C%20Braamfontein%2C%20Johannesburg%2C%202017!5e1!3m2!1spt-PT!2sza!4v1726524983089!5m2!1spt-PT!2sza"
+   width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+    </div>
+  
+    <div id="map-riverlea" class="map" style="display: none;">
+  
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2833.7630049794466!2d27.97549517430856!3d-26.21326007707098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95097e74430c77%3A0xe628f8b3682f7e3f!2sColorado%20Dr%2C%20Riverlea%2C%20Johannesburg%2C%202093!5e1!3m2!1spt-PT!2sza!4v1726525329485!5m2!1spt-PT!2sza"
+   width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+    </div>
+    
+    <div id="map-glenhazel" class="map" style="display: none;">
+  
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2835.511096586598!2d28.103846274305415!3d-26.141380677115325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950d78b2affa53%3A0xe20aa1a2bb95d53a!2s4%20Long%20Ave%2C%20Glenhazel%2C%20Johannesburg%2C%202192!5e1!3m2!1spt-PT!2sza"
+   width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  
+    </div>
+  
+  </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Hope for Refugees</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
